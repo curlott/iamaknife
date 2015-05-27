@@ -1,73 +1,307 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>I AM A KNIFE - DJ SET</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      background-color: #344c74;
-      font-family: 'Impact', sans-serif;
-      font-weight: 900;
-      color: #edf4d1;
-      font-size: 12px;
-      font-size: 1em;
-    }
+	<meta name="viewport" content="width=device-width, 
+   initial-scale=1.0, 
+   maximum-scale=1.0, 
+   user-scalable=no">
+	<title>I AM A KNIFE</title>
+	<style type="text/css">
+		html, body {
+			padding: 0;
+			margin: 0;
+			background-color: #58595b;
+			font-family: 'Lato';
+			color: #373333;
+			font-size: 12px;
+			height: 100%;
 
-    header {
-      max-width: 784px;
-      width: 100%;
-      margin: 100px auto;
-    }
-      .header-img {
-        width: 100%;
-        height: auto;
-      }
-    nav {
-      margin: 100px auto;
-      text-align: center;
-    }
-    a {
-      color: lightgrey;
-      display: block;
-      text-decoration: none;
-      font-size: 3em;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      background-color: rgba(255,255,255,0.2);
-      padding: 0.1em 0.2em;
-      margin: 0.2em 0;
-    }
-    a:hover {
-      color: #edf4d1;
-      text-decoration: underline;
-      background-color: rgba(255,255,255,0.3);
-    }
-    .events {
-      margin: 100px auto;
-      text-align: center;
-      font-size: 2em;
-      letter-spacing: 0.1em;
-      font-weight: 400;
-    }
-    .events a {
-      font-size: 1em;
-    }
-  </style>
+		}
+		a {
+			color: white;
+			text-decoration: underline;
+		}
+		p {
+			font-size: 1.5em;
+		}
+		.container {
+			max-width: 1200px;
+			width: 100%;
+
+			height: 100%;
+		}
+		.responsive-logo-container {
+			float: left;
+			width: 50%;
+			height: 100%;
+		}
+		.logo {
+
+		}
+		.logosrc {
+			max-width: 600px;
+			width: 100%;
+			height: auto;
+			
+		}
+		.responsive-slip {
+			float: left;
+			width: 50%;
+		}
+		nav {
+			/*background-color: #f06669;*/
+			margin: 10px 0;
+			
+		}
+		.nav-list:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		.nav-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.nav-list-item {
+			float: left;
+			width: 50%;
+			text-align: center;
+		}
+		.nav-list-item-link {
+			color: white;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			font-size: 1.4em;
+			display: block;
+			text-decoration: none;
+			box-sizing: border-box;
+			padding: 10px;
+		}
+		.shadow {
+			/*box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3);*/
+		}
+		main {
+			  	box-sizing: border-box;
+				background-color: #F09A66;
+				padding: 10px;
+				color: #E1DD78;
+				font-size: 11px;
+				font-family: 'Pacifico', cursive;
+				letter-spacing: 0.1em;
+			
+		}
+		.fa-facebook-official {
+			color:#3b5998;
+		}
+		.fa-envelope-o {
+			color:rgb(201, 44, 25);
+		}
+
+		.event-list {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+		}
+		.event-list-item {
+			width: 100%;
+			margin-top: 10px;
+			padding: 10px;
+			box-sizing: border-box;
+			background-color: #f06669;
+			position: relative;
+		}
+
+		.concert {
+			color: #f06669;
+			
+			background-color: #E1DD78;
+		}
+		.disco {
+			background-color: #f06669;
+			color: #E1DD78;
+
+		}
+		.event-list-item-cat span{
+			position: absolute;
+			right: 8px;
+			bottom: -1px;
+			color: #58595b;
+			font-size: 4em;
+		}
+		.disco .event-list-item-cat span:before{
+			content: "DISCO";
+		}
+		.concert .event-list-item-cat span:before{
+			content: "CONCERT";
+		}
+
+		.event-list-item-cat {
+			pointer-events: none;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+		.event-list-item-article {
+			position: relative;
+		}
+		.event-list-item-date {
+			float: left;
+			margin-right: 10px;
+		}
+		.event-list-item-title {
+			float: left;
+
+		}
+		.event-list-item-title-h1 {
+			margin: 0;
+			font-size: 1.0em;
+		}
+		.event-list-item-location {
+			clear: both;
+
+		}
+		.concert .event-list-item-location-span, .concert .event-list-item-title-h1 {
+			background-color: rgba(225, 221, 120, 0.75);
+		}
+
+		.disco .event-list-item-location-span, .disco .event-list-item-title-h1 {
+			background-color: rgba(240, 102, 105, 0.75);
+		}
+		.event-list-item-comment {
+
+		}
+		.iaak {
+			font-family: 'Lato', Arial;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			color: #58595B;
+		}
+		@media (max-width: 1090px) {
+			.nav-list-item {
+				font-size: 0.7em;
+			}
+		}
+		@media (max-width: 740px) {
+			.nav-list-item {
+				font-size: 0.55em;
+			}
+		}
+		@media (max-width: 600px) {
+			.responsive-logo-container, .responsive-slip {
+				width: 100%;
+				float: none;
+				height: auto;
+			}
+			.nav-list-item {
+				font-size: 0.7em;
+			}
+		}
+	</style>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:900+PTSans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/fontawesome/css/font-awesome.min.css">
 </head>
 <body>
-  <div class="content">
-    <header>
-      <img src="hp-header.png" alt="I AM A KNIFE" class="header-img">
-    </header>
-    <nav>
-      <a href="mailto:hello@iamaknife.de">hello@iamaknife.de</a><br>
-      <a href="https://fb.com/iamaknife">fb.com/iamaknife</a> 
-    </nav>
-    <article class="events"><a href="http://www.oetingervilla.de/programm/1974/lorraine-pssgs-godzilla-was-a-friend-of-mine/#detail">KONZERT - 05.05.2015 - Oetinger Villa (Keller), Darmstadt<br />lorraine, PSSGS, Godzilla was a friend of mine, La petite mort / Little death</a></article>
-    <article class="events">DJ - Jeden Donnerstag - Goldene Krone (Rockybar), Darmstadt<br />Indie, Surf, Punk, Emo</article>
-  </div>
+	<div class="container">
+		<div class="responsive-logo-container">
+			<div class="logo shadow">
+				<object class="logosrc" type="image/svg+xml" data="images/iaak-01.svg" width="600" height="600">
+					<img class="logosrc" src="images/iaak.jpg" width="600px" height="600px"/>
+				</object>
+			</div>
+		</div>
+		<div class="responsive-slip">
+			<nav class="shadow">
+				<ul class="nav-list">
+					<li class="nav-list-item"><a class="nav-list-item-link" href="https://fb.com/iamaknife">fb.com/iamaknife</a></li>
+					<li class="nav-list-item"><a class="nav-list-item-link" href="mailto:hello@iamaknife.de">hello@iamaknife.de</a></li>
+					<!-- <li class="nav-list-item"><a class="nav-list-item-link" href="https://fb.com/iamaknife"><i class="fa fa-facebook-official fa-5x"></i></a></li>
+					<li class="nav-list-item"><a class="nav-list-item-link" href="mailto:hello@iamaknife.de"><i class="fa fa-envelope-o fa-5x"></i></a></li> -->
+				</ul>
+			</nav>
+			<main class="shadow">
+				<p>
+					<span class="iaak">I AM A KNIFE</span> legt Punk, Indie, Pop und Surf auf. <span class="iaak">I AM A KNIFE</span> veranstaltet aber auch gerne mal mit ein paar sehr netten Freunden ein schnuckeliges Konzert in Darmstadt.
+				</p>
+				<p>
+					Fight solitude with DIY attitude.
+				</p>
+			</main>
+			<section class="events">
+				<ul class="event-list">
+					<li class="shadow disco event-list-item">
+						<div class="event-list-item-cat"><span></span></div>
+						<article class="event-list-item-article">
+							<header>
+								<div class="event-list-item-date">04.06.</div>
+								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">INDIECLUB / mit Dave Knife</h1></div>
+							</header>
+							<div class="event-list-item-location"><span class="event-list-item-location-span">Goldene Krone (Rockybar)</span></div>
+							<div class="event-list-item-comment"></div>
+						</article>
+					</li>
+					<li class="shadow concert event-list-item">
+						<div class="event-list-item-cat"><span></span></div>
+						<article class="event-list-item-article">
+							<div class="cat"><span></span></div>
+							<header>
+								<div class="event-list-item-date">05.06.</div>
+								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">LORRAINE / PSSGS / GODZILLA WAS A FRIEND OF MINE / LA PETITE MORT/LITTLE DEATH</h1></div>
+							</header>
+							<div class="event-list-item-location"><span class="event-list-item-location-span">Oetinger Villa (Keller)</span></div>
+							<div class="event-list-item-comment"></div>
+						</article>
+					</li>
+					<li class="shadow disco event-list-item">
+						<div class="event-list-item-cat"><span></span></div>
+						<article class="event-list-item-article">
+							<header>
+								<div class="event-list-item-date">11.06.</div>
+								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">INDIECLUB / mit Dave Knife</h1></div>
+							</header>
+							<div class="event-list-item-location"><span class="event-list-item-location-span">Goldene Krone (Rockybar)</span></div>
+							<div class="event-list-item-comment"></div>
+						</article>
+					</li>
+					<li class="shadow disco event-list-item">
+						<div class="event-list-item-cat"><span></span></div>
+						<article class="event-list-item-article">
+							<header>
+								<div class="event-list-item-date">18.06.</div>
+								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">INDIECLUB / mit Dave Knife</h1></div>
+							</header>
+							<div class="event-list-item-location"><span class="event-list-item-location-span">Goldene Krone (Rockybar)</span></div>
+							<div class="event-list-item-comment"></div>
+						</article>
+					</li>
+					<li class="shadow disco event-list-item">
+						<div class="event-list-item-cat"><span></span></div>
+						<article class="event-list-item-article">
+							<header>
+								<div class="event-list-item-date">25.06.</div>
+								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">INDIECLUB / mit Dave Knife</h1></div>
+							</header>
+							<div class="event-list-item-location"><span class="event-list-item-location-span">Goldene Krone (Rockybar)</span></div>
+							<div class="event-list-item-comment"></div>
+						</article>
+					</li>
+					<li class="shadow concert event-list-item">
+						<div class="event-list-item-cat"><span></span></div>
+						<article class="event-list-item-article">
+							<div class="cat"><span></span></div>
+							<header>
+								<div class="event-list-item-date">12.07.</div>
+								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">JERKNERDS / HANS-DIETER X. + BBQ im Hof</h1></div>
+							</header>
+							<div class="event-list-item-location"><span class="event-list-item-location-span">Oetinger Villa (Keller/Proberaum)</span></div>
+							<div class="event-list-item-comment"></div>
+						</article>
+					</li>
+				</ul>
+			</section>
+		</div>	
+	</div>
 </body>
 </html>
