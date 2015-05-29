@@ -24,6 +24,7 @@
 
 		}
 		a {
+			position: relative;
 			color: white;
 			text-decoration: underline;
 		}
@@ -39,7 +40,6 @@
 		.responsive-logo-container {
 			float: left;
 			width: 50%;
-			height: 100%;
 		}
 		.logo {
 
@@ -61,7 +61,7 @@
 			
 		}
 		.underline {
-			border-bottom: 3px solid white;
+			border-bottom: 0.2em solid white;
 		}
 		.nav-list:after {
 		  content: "";
@@ -110,7 +110,7 @@
 			border-radius: 77px;
 		}
 
-		.event-list {
+		ul {
 			padding: 0;
 			margin: 0;
 			list-style-type: none;
@@ -118,7 +118,6 @@
 		.event-list-item {
 			width: 100%;
 			margin-top: 10px;
-			padding: 10px;
 			box-sizing: border-box;
 			background-color: #f06669;
 			position: relative;
@@ -156,8 +155,13 @@
 			width: 100%;
 			overflow: hidden;
 		}
+		.event-list-item-link {
+			text-decoration: none;
+			color: inherit;
+		}
 		.event-list-item-article {
 			position: relative;
+			padding: 10px;
 		}
 		.event-list-item-date {
 			float: left;
@@ -192,14 +196,53 @@
 			color: #F06669;
 		}
 
+		.sitemap {
+			clear: both;
+			padding-top: 60px;
+			text-align: center;
+			display: table;   /* Allow the centering to work */
+			margin: 0 auto;
+		}
+
+		.sitemap-list-item {
+			display: inline;
+			float: left;
+		}
+
+		.sitemap-list-item-link {
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			font-size: 0.8em;
+			text-decoration: none;
+		}
 		.impressum {
 			clear: both;
-			font-size: 0.7em;
+			font-size: 0.6em;
 			font-family: 'Arial';
-			margin: 0 auto;
-			padding: 200px 10px 10px 10px;
-			max-width: 580px;
+			margin: 300px 10px 10px 10px;
+			padding-bottom: 60px;
 			color: #848484;
+			-webkit-column-width: 25%;
+			-webkit-column-count: 5;
+			-webkit-column-rule-color: #848484;
+			-webkit-column-rule-width: 1px;
+			-webkit-column-rule-style: dotted;
+			-moz-column-width: 25%;
+			-moz-column-count: 5;
+			-moz-column-rule-color: #848484;
+			-moz-column-rule-width: 1px;
+			-moz-column-rule-style: dotted;
+			column-width: 25%;
+			column-count: 5;
+			column-rule-color: #848484;
+			column-rule-width: 1px;
+			column-rule-style: dotted;
+		}
+
+		.impressum h1 {
+			-webkit-column-span: all;
+			-moz-column-span: all;
+			column-span: all;
 		}
 		@media (max-width: 1090px) {
 			.nav-list-item {
@@ -224,6 +267,11 @@
 		}
 
 		@media (max-width: 720px) {
+			.impressum {
+				-webkit-column-count: 1;
+				-moz-column-count: 1;
+				column-count: 1;
+			}
 			
 		}
 	</style>
@@ -751,78 +799,97 @@
 				<ul class="event-list">
 					<li class="shadow disco event-list-item">
 						<div class="event-list-item-cat"><span></span></div>
-						<article class="event-list-item-article">
-							<header>
-								<div class="event-list-item-date">04.06.</div>
-								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">INDIECLUB / mit Dave Knife</h1></div>
-							</header>
-							<div class="event-list-item-location"><span class="event-list-item-location-span">Goldene Krone (Rockybar)</span></div>
-							<div class="event-list-item-comment"></div>
-						</article>
+						<a class="event-list-item-link" href="http://www.oetingervilla.de/programm/1974/lorraine-pssgs-godzilla-was-a-friend-of-mine/#detail">
+							<article class="event-list-item-article">
+								<header>
+									<div class="event-list-item-date">04.06.</div>
+									<div class="event-list-item-title"><h1 class="event-list-item-title-h1">INDIECLUB / mit Dave Knife</h1></div>
+								</header>
+								<div class="event-list-item-location"><span class="event-list-item-location-span">Goldene Krone (Rockybar)</span></div>
+								<div class="event-list-item-comment"></div>
+							</article>
+						</a>
 					</li>
 					<li class="shadow concert event-list-item">
 						<div class="event-list-item-cat"><span></span></div>
-						<article class="event-list-item-article">
-							<div class="cat"><span></span></div>
-							<header>
-								<div class="event-list-item-date">05.06.</div>
-								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">LORRAINE / PSSGS / GODZILLA WAS A FRIEND OF MINE / LA PETITE MORT/LITTLE DEATH</h1></div>
-							</header>
-							<div class="event-list-item-location"><span class="event-list-item-location-span">Oetinger Villa (Keller)</span></div>
-							<div class="event-list-item-comment"></div>
-						</article>
+						<a class="event-list-item-link" href="http://www.goldene-krone.de">
+							<article class="event-list-item-article">
+								<div class="cat"><span></span></div>
+								<header>
+									<div class="event-list-item-date">05.06.</div>
+									<div class="event-list-item-title"><h1 class="event-list-item-title-h1">LORRAINE / PSSGS / GODZILLA WAS A FRIEND OF MINE / LA PETITE MORT/LITTLE DEATH</h1></div>
+								</header>
+								<div class="event-list-item-location"><span class="event-list-item-location-span">Oetinger Villa (Keller)</span></div>
+								<div class="event-list-item-comment"></div>
+							</article>
+						</a>
 					</li>
 					<li class="shadow disco event-list-item">
 						<div class="event-list-item-cat"><span></span></div>
-						<article class="event-list-item-article">
-							<header>
-								<div class="event-list-item-date">11.06.</div>
-								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">INDIECLUB / mit Dave Knife</h1></div>
-							</header>
-							<div class="event-list-item-location"><span class="event-list-item-location-span">Goldene Krone (Rockybar)</span></div>
-							<div class="event-list-item-comment"></div>
-						</article>
+						<a class="event-list-item-link" href="http://www.goldene-krone.de">
+							<article class="event-list-item-article">
+								<header>
+									<div class="event-list-item-date">11.06.</div>
+									<div class="event-list-item-title"><h1 class="event-list-item-title-h1">INDIECLUB / mit Dave Knife</h1></div>
+								</header>
+								<div class="event-list-item-location"><span class="event-list-item-location-span">Goldene Krone (Rockybar)</span></div>
+								<div class="event-list-item-comment"></div>
+							</article>
+						</a>
 					</li>
 					<li class="shadow disco event-list-item">
 						<div class="event-list-item-cat"><span></span></div>
-						<article class="event-list-item-article">
-							<header>
-								<div class="event-list-item-date">18.06.</div>
-								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">INDIECLUB / mit Dave Knife</h1></div>
-							</header>
-							<div class="event-list-item-location"><span class="event-list-item-location-span">Goldene Krone (Rockybar)</span></div>
-							<div class="event-list-item-comment"></div>
-						</article>
+						<a class="event-list-item-link" href="http://www.goldene-krone.de">
+							<article class="event-list-item-article">
+								<header>
+									<div class="event-list-item-date">18.06.</div>
+									<div class="event-list-item-title"><h1 class="event-list-item-title-h1">INDIECLUB / mit Dave Knife</h1></div>
+								</header>
+								<div class="event-list-item-location"><span class="event-list-item-location-span">Goldene Krone (Rockybar)</span></div>
+								<div class="event-list-item-comment"></div>
+							</article>
+						</a>
 					</li>
 					<li class="shadow disco event-list-item">
 						<div class="event-list-item-cat"><span></span></div>
-						<article class="event-list-item-article">
-							<header>
-								<div class="event-list-item-date">25.06.</div>
-								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">INDIECLUB / mit Dave Knife</h1></div>
-							</header>
-							<div class="event-list-item-location"><span class="event-list-item-location-span">Goldene Krone (Rockybar)</span></div>
-							<div class="event-list-item-comment"></div>
-						</article>
+						<a class="event-list-item-link" href="http://www.goldene-krone.de">
+							<article class="event-list-item-article">
+								<header>
+									<div class="event-list-item-date">25.06.</div>
+									<div class="event-list-item-title"><h1 class="event-list-item-title-h1">INDIECLUB / mit Dave Knife</h1></div>
+								</header>
+								<div class="event-list-item-location"><span class="event-list-item-location-span">Goldene Krone (Rockybar)</span></div>
+								<div class="event-list-item-comment"></div>
+							</article>
+						</a>
 					</li>
 					<li class="shadow concert event-list-item">
 						<div class="event-list-item-cat"><span></span></div>
-						<article class="event-list-item-article">
-							<div class="cat"><span></span></div>
-							<header>
-								<div class="event-list-item-date">12.07.</div>
-								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">JERKNERDS (DK) / HANS-DIETER X. + BBQ im Hof</h1></div>
-							</header>
-							<div class="event-list-item-location"><span class="event-list-item-location-span">Oetinger Villa (Keller/Proberaum)</span></div>
-							<div class="event-list-item-comment"></div>
-						</article>
+						<a class="event-list-item-link" href="http://www.oetingervilla.de/programm/2097/jerknerds-hans-dieter-x/#detail">
+							<article class="event-list-item-article">
+								<div class="cat"><span></span></div>
+								<header>
+									<div class="event-list-item-date">12.07.</div>
+									<div class="event-list-item-title"><h1 class="event-list-item-title-h1">JERKNERDS (DK) / HANS-DIETER X. + BBQ im Hof</h1></div>
+								</header>
+								<div class="event-list-item-location"><span class="event-list-item-location-span">Oetinger Villa (Keller/Proberaum)</span></div>
+								<div class="event-list-item-comment"></div>
+							</article>
+						</a>
 					</li>
 				</ul>
 			</section>
 		</div>	
+		<div class="sitemap">
+			<ul class="sitemap-list">
+				<li class="sitemap-list-item">&#10084;&nbsp;<a class="sitemap-list-item-link underline" href="mailto:hello@iamaknife.de">Kontakt</a>&nbsp;&#10084;&nbsp;</li>
+				<li class="sitemap-list-item"><a class="sitemap-list-item-link underline" href="https://fb.com/iamaknife">Facebook</a>&nbsp;&#10084;&nbsp;</li>
+				<li class="sitemap-list-item"><a class="sitemap-list-item-link underline" href="#impressum">Impressum</a>&nbsp;&#10084;</li>
+			</ul>
+		</div>
 
 		
-		<div class='impressum'><a name="impressum"></a><h1>Impressum</h1><p>Angaben gemäß § 5 TMG</p><p>David Curlott <br> 
+		<div class='impressum'><a name="impressum"></a><h1>Impressum</h1><p style="margin-top: 0">Angaben gemäß § 5 TMG</p><p>David Curlott <br> 
 		Karlstraße 25<br> 
 		64283 Darmstadt <br> 
 		</p><p> <strong>Vertreten durch: </strong><br>
