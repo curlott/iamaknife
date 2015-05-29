@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#">
 <head>
@@ -43,7 +44,7 @@
 
 		}
 		.logosrc {
-			max-width: 600px;
+			max-width: 780px;
 			width: 100%;
 			height: 50%;
 			
@@ -56,6 +57,9 @@
 			/*background-color: #f06669;*/
 			margin: 10px 0;
 			
+		}
+		.underline {
+			border-bottom: 3px solid white;
 		}
 		.nav-list:after {
 		  content: "";
@@ -86,20 +90,22 @@
 			/*box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3);*/
 		}
 		.main, main {
-			  	box-sizing: border-box;
-				background-color: #F09A66;
-				padding: 10px;
-				color: #E1DD78;
-				font-size: 11px;
-				font-family: 'Pacifico', cursive;
-				letter-spacing: 0.1em;
+		  	box-sizing: border-box;
+		  	/* background-color: #F09A66; */
+		  	padding: 10px;
+		  	color: #E1DD78;
+		  	font-size: 11px;
+		  	font-family: 'Pacifico', cursive;
+		  	letter-spacing: 0.1em;
+		  	min-height: 170px;
 			
 		}
-		.fa-facebook-official {
-			color:#3b5998;
-		}
-		.fa-envelope-o {
-			color:rgb(201, 44, 25);
+
+		.dave {
+			float: left;
+			margin: 0 10px 0 0;
+			border: 3px solid white;
+			border-radius: 77px;
 		}
 
 		.event-list {
@@ -135,10 +141,10 @@
 			font-size: 4em;
 		}
 		.disco .event-list-item-cat span:before{
-			content: "DISCO";
+			content: "DISKO";
 		}
 		.concert .event-list-item-cat span:before{
-			content: "CONCERT";
+			content: "KONZERT";
 		}
 
 		.event-list-item-cat {
@@ -181,19 +187,14 @@
 			font-family: 'Lato', Arial;
 			text-transform: uppercase;
 			letter-spacing: 0.2em;
-			color: #58595B;
+			color: white;
 		}
 		@media (max-width: 1090px) {
 			.nav-list-item {
 				font-size: 0.7em;
 			}
 		}
-		@media (max-width: 740px) {
-			.nav-list-item {
-				font-size: 0.55em;
-			}
-		}
-		@media (max-width: 600px) {
+		@media (max-width: 770px) {
 			.responsive-logo-container, .responsive-slip {
 				width: 100%;
 				float: none;
@@ -215,7 +216,7 @@
 	<div class="container">
 		<div class="responsive-logo-container">
 			<div class="logo shadow">
-				<svg class="logosrc" width="600" height="600" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				<svg class="logosrc" width="780" height="780" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 viewBox="0 90 612 612" enable-background="new 0 90 612 612" xml:space="preserve">
 				<g id="BG">
 					<rect y="90" fill="#58595B" width="612" height="612"/>
@@ -714,15 +715,16 @@
 		<div class="responsive-slip">
 			<nav>
 				<ul class="nav-list">
-					<li class="nav-list-item"><a class="nav-list-item-link" href="https://fb.com/iamaknife">fb.com/iamaknife</a></li>
-					<li class="nav-list-item"><a class="nav-list-item-link" href="mailto:hello@iamaknife.de">hello@iamaknife.de</a></li>
+					<li class="nav-list-item"><a class="nav-list-item-link" href="https://fb.com/iamaknife"><span class="underline">fb.com/iamaknife</span></a></li>
+					<li class="nav-list-item"><a class="nav-list-item-link" href="mailto:hello@iamaknife.de"><span class="underline">hello@iamaknife.de</span></a></li>
 					<!-- <li class="nav-list-item"><a class="nav-list-item-link" href="https://fb.com/iamaknife"><i class="fa fa-facebook-official fa-5x"></i></a></li>
 					<li class="nav-list-item"><a class="nav-list-item-link" href="mailto:hello@iamaknife.de"><i class="fa fa-envelope-o fa-5x"></i></a></li> -->
 				</ul>
 			</nav>
 			<div class="main">
+				<img class="dave" src="http://i62.tinypic.com/2lkcyyw.jpg" height="150" width="150" alt="Dave Knife">
 				<p>
-					<span class="iaak">I AM A KNIFE</span> legt Punk, Indie, Pop und Surf auf. <span class="iaak">I AM A KNIFE</span> veranstaltet aber auch gerne mal mit ein paar sehr netten Freunden ein schnuckeliges Konzert in Darmstadt.
+					<span class="iaak">I&nbsp;AM&nbsp;A&nbsp;KNIFE</span> legt Punk, Indie, Pop und Surf auf. <span class="iaak">I&nbsp;AM&nbsp;A&nbsp;KNIFE</span> veranstaltet aber auch gerne mal mit ein paar sehr netten Freunden ein schnuckeliges Konzert in Darmstadt.
 				</p>
 			</div>
 			<section class="events">
@@ -789,7 +791,7 @@
 							<div class="cat"><span></span></div>
 							<header>
 								<div class="event-list-item-date">12.07.</div>
-								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">JERKNERDS / HANS-DIETER X. + BBQ im Hof</h1></div>
+								<div class="event-list-item-title"><h1 class="event-list-item-title-h1">JERKNERDS (DK) / HANS-DIETER X. + BBQ im Hof</h1></div>
 							</header>
 							<div class="event-list-item-location"><span class="event-list-item-location-span">Oetinger Villa (Keller/Proberaum)</span></div>
 							<div class="event-list-item-comment"></div>
